@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 const Navbar = () => {
@@ -28,42 +29,33 @@ const Navbar = () => {
       {/* logo - end */}
       {/* nav - start */}
       <nav className="hidden gap-12 lg:flex">
-        <a
-          href="#"
+        <Link
+          href="/"
           className="text-lg font-semibold text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-700"
         >
           Home
-        </a>
-        <a
-          href="#"
-          className="inline-flex items-center gap-1 text-lg font-semibold text-indigo-500"
+        </Link>
+
+        <Link
+          href="/login"
+          className="text-lg font-semibold text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-700"
         >
-          Features
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-5 w-5 text-gray-800"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-          >
-            <path
-              fillRule="evenodd"
-              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-              clipRule="evenodd"
-            />
-          </svg>
-        </a>
-        <a
+        
+          
+          Login
+        </Link>
+        <Link
+          href="/signup"
+          className="text-lg font-semibold text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-700"
+        >
+          Signup
+        </Link>
+        <Link
           href="#"
           className="text-lg font-semibold text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-700"
         >
-          Pricing
-        </a>
-        <a
-          href="#"
-          className="text-lg font-semibold text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-700"
-        >
-          About
-        </a>
+          
+        </Link>
       </nav>
       {/* nav - end */}
       {/* buttons - start */}
