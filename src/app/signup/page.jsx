@@ -1,4 +1,5 @@
 'use client'
+import axios from 'axios';
 import { useFormik } from 'formik'
 import React from 'react'
 import * as Yup from 'yup';
@@ -25,8 +26,19 @@ const Signup = () => {
       password: '',
       confirmpassword: ''
     },
-    onSubmit: (values) => {
+    onSubmit: async (values) => {
       console.log(values);
+
+      // send values to backend
+
+      const res = await axios.post('http://localhost:5000/user/add', values)
+      console.log(res.status);
+      if(res.status === 200){
+        toast.success('Signup Successful');
+      }else{
+        toast.success('Signup Failed')
+      }
+      
 
     },
     validationSchema: signupSchema
