@@ -149,12 +149,14 @@ const Signup = () => {
 
                 {/* Form Group */}
                 <div>
-                  <label htmlFor="confirm-password" className="block text-sm mb-2 text-gray-800">Confirm Password</label>
+                  <div className="flex flex-wrap items-center gap-2">
+                    <label htmlFor="password" className="block text-sm mb-2 text-gray-800">Password</label>
+                  </div>
                   <div className="relative">
                     <input type="password"
                       id="confirmPassword"
                       onChange={SignupForm.handleChange}
-                      value={SignupForm.values.confirmpassword}
+                      value={SignupForm.values.confirmPassword}
                       className="py-2.5 sm:py-3 px-4 block w-full bg-white border-gray-200 rounded-lg sm:text-sm text-gray-800 placeholder:text-gray-500 focus:border-blue-700 focus:ring-blue-700 disabled:opacity-50 disabled:pointer-events-none" aria-describedby="confirm-password-error" />
                     <div className="hidden absolute inset-y-0 end-0 pointer-events-none pe-3">
                       <svg className="size-5 text-red-500" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
@@ -163,8 +165,8 @@ const Signup = () => {
                     </div>
                   </div>
                   {
-                    (SignupForm.errors.confirmpassword && SignupForm.touched.confirmpassword) && (
-                      <p className=" text-xs text-red-600 mt-2" id="email-error">{SignupForm.errors.confirmpassword}</p>
+                    (SignupForm.errors.confirmPassword && SignupForm.touched.confirmPassword) && (
+                      <p className=" text-xs text-red-600 mt-2" id="email-error">{SignupForm.errors.confirmPassword}</p>
                     )
                   }
                 </div>
