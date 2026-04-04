@@ -18,6 +18,8 @@ const Login = () => {
           .then((response) => {
               toast.success('Login Successful');
               console.log(response.data);
+              const { token } = response.data;
+              localStorage.setItem('token', token);
               
           }).catch((err) => {
               console.log(err);
